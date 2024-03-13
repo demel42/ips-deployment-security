@@ -5,22 +5,26 @@
         {
             "filename": "security-helper.php",
             "location": "Sicherheit",
-            "name": "Hilfsfunktionen für Security"
+            "name": "Hilfsfunktionen für Security",
+			"requires": [ "GLOBAL_HELPER", "VARIABLE_HELPER" ]
         },
         {
             "filename": "maintain_events.php",
             "location": "Sicherheit",
-            "name": "Events anlegen/löschen"
+            "name": "Events anlegen/löschen",
+			"requires": [ "SECURITY_HELPER" ]
         },
         {
             "filename": "security-webhook.php",
             "location": "Sicherheit",
-            "name": "WebHook für Security"
+            "name": "WebHook für Security",
+			"requires": [ "SECURITY_HELPER" ]
         },
         {
             "filename": "determine_status.php",
             "location": "Sicherheit\\Gruppen\\kritische",
-            "name": "Status ermitteln"
+            "name": "Status ermitteln",
+			"requires": [ "SECURITY_HELPER" ]
         }
     ]
 }
