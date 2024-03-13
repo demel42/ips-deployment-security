@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "tstamp": 1710320991,
+    "files": [
+        {
+            "filename": "security-helper.php",
+            "location": "Sicherheit",
+            "name": "Hilfsfunktionen für Security"
+        },
+        {
+            "filename": "maintain_events.php",
+            "location": "Sicherheit",
+            "name": "Events anlegen/löschen"
+        },
+        {
+            "filename": "security-webhook.php",
+            "location": "Sicherheit",
+            "name": "WebHook für Security"
+        },
+        {
+            "filename": "determine_status.php",
+            "location": "Sicherheit\\Gruppen\\kritische",
+            "name": "Status ermitteln"
+        },
+    ]
+}
