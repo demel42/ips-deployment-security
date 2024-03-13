@@ -21,6 +21,6 @@
             "filename": "determine_status.php",
             "location": "Sicherheit\\Gruppen\\kritische",
             "name": "Status ermitteln"
-        },
+        }
     ]
 }
