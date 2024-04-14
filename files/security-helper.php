@@ -77,12 +77,12 @@ function Security_CheckObject($devID)
                         $state = $b ? 2 /* Offen */ : 0 /* Geschlossen */;
                         break;
                     case 'HmIP-SWDM':
+                    case 'HmIP-SCI':
                         $varID = IPS_GetObjectIDByIdent('STATE', $devID);
                         $i = GetValueInteger($varID);
                         $state = $i ? 2 /* Offen */ : 0 /* Geschlossen */;
                         break;
                     case 'HM-SEC-RHS':
-                    case 'HmIP-SCI':
                     case 'HmIP-SRH':
                     case 'HmIP-SWDO':
                     case 'HmIP-SWDO-2':
@@ -356,7 +356,7 @@ function Security_Calculate4Script($scriptID)
         }
     }
 
-	$varID = Variable_Create($grpID, '', 'Zustand', VARIABLETYPE_INTEGER, 'Local.SecurityState', 0, 0);
+    $varID = Variable_Create($grpID, '', 'Zustand', VARIABLETYPE_INTEGER, 'Local.SecurityState', 0, 0);
     SetValueInteger($varID, $state);
 
     $visuList = Security_CheckGroup('');
@@ -364,7 +364,7 @@ function Security_Calculate4Script($scriptID)
     $grp = IPS_GetObject($grpID);
     $parID = $grp['ParentID'];
 
-	$varID = Variable_Create($parID, '', 'Übersicht', VARIABLETYPE_STRING, '~HTMLBox', 0, 0);
+    $varID = Variable_Create($parID, '', 'Übersicht', VARIABLETYPE_STRING, '~HTMLBox', 0, 0);
     SetValueString($varID, $html);
 
     IPS_LogMessage(__FUNCTION__, 'Gruppe "' . $grpName . '"=' . $state);
