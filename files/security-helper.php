@@ -76,16 +76,16 @@ function Security_CheckObject($devID)
                         $b = GetValueBoolean($varID);
                         $state = $b ? 2 /* Offen */ : 0 /* Geschlossen */;
                         break;
-                    case 'HmIP-SWDM':
                     case 'HmIP-SCI':
+                    case 'HmIP-SWDM':
+                    case 'HmIP-SWDO':
+                    case 'HmIP-SWDO-2':
                         $varID = IPS_GetObjectIDByIdent('STATE', $devID);
                         $i = GetValueInteger($varID);
                         $state = $i ? 2 /* Offen */ : 0 /* Geschlossen */;
                         break;
                     case 'HM-SEC-RHS':
                     case 'HmIP-SRH':
-                    case 'HmIP-SWDO':
-                    case 'HmIP-SWDO-2':
                         $varID = IPS_GetObjectIDByIdent('STATE', $devID);
                         $state = GetValueInteger($varID);
                         break;
